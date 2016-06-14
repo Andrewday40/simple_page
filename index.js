@@ -18,6 +18,10 @@ server.get('/contact', function(request, response){
   response.sendFile('public/html/contact.html', {root: __dirname});
 });
 
+server.post('/about', function(request, response){
+  response.json(request.body);
+});
+
 server.post('/contact', function(request, response){
   response.json(request.body);
 });
